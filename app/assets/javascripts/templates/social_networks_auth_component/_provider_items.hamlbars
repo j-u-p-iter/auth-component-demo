@@ -1,0 +1,9 @@
+{{#ifCond type '===' 'simple'}}
+{{#each providers as |providerData|}}
+{{> clearance/social_networks_auth_component/provider_item/_simple providerData}}
+{{/each}}
+{{else}}
+{{#each providers as |providerData|}}
+{{> clearance/social_networks_auth_component/provider_item/_extended providerData}}
+{{/each}}
+{{/ifCond}}

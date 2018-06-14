@@ -1,0 +1,2 @@
+%div{class: 'auth-component clearfix js-auth-component {{fromCamelToDash contentType}}'}
+  {{> clearance/auth_component/mobile/_body}}

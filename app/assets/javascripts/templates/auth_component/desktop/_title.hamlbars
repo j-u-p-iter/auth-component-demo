@@ -1,0 +1,5 @@
+.auth-component-section.auth-component-section-header
+  {{#each content}}
+  %div{class: 'auth-component-section-header-content {{fromCamelToDash @key}}'}
+    {{{this.title}}}
+  {{/each}}

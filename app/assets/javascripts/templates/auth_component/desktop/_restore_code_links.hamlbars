@@ -1,0 +1,4 @@
+%span.password-link.dn.js-restore-password-auth
+  = I18n.t('clearance.templates.auth_component.desktop.fields.password.link.restore_password')
+%span.password-link.dn.js-get-code-auth
+  = I18n.t('clearance.templates.auth_component.desktop.fields.password.link.send_auth_code')

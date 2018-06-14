@@ -1,0 +1,3 @@
+.social-networks-auth-component-item.js-provider-item
+  %a.js-provider-item-link{href: '{{this.omniauthAuthorizeURL}}'}
+    %i.social-networks-auth-component-item-icon{class: '{{this.name}}'}

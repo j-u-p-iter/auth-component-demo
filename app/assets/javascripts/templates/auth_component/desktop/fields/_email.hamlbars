@@ -1,0 +1,19 @@
+%div{class: 'form-group form-group-self-cleared js-group-email-auth {{#if fields.inline}}inline{{/if}}',
+     data: {'required-data-message' => I18n.t('clearance.templates.auth_component.desktop.fields.email.message.required'),
+            'invalid-data-message' => I18n.t('clearance.templates.auth_component.desktop.fields.email.message.invalid'),
+            type: 'email'}}
+  {{#unless fields.withoutLabels}}
+  .label
+    %label{class: '{{#isRequired "email"}}required{{/isRequired}}'}
+      = I18n.t('clearance.templates.auth_component.desktop.fields.email.label')
+  {{/unless}}
+
+  .text-field-wrapper
+    {{> clearance/auth_component/desktop/_icons_holder}}
+    %input{class: 'text-field js-input-email-auth',
+           name: 'email',
+           type: 'text',
+           value: '{{fields.values.email}}',
+           placeholder: "{{#unless fields.withoutPlaceholder}}#{I18n.t('clearance.templates.auth_component.desktop.fields.email.placeholder')}{{/unless}}",
+           autocomplete: '{{fields.autocomplete}}'}
+  .error-block.js-error-message

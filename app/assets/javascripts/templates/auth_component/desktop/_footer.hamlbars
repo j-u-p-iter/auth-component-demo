@@ -1,0 +1,3 @@
+.auth-component-section.auth-component-section-footer
+  .auth-component-button-cell {{> clearance/auth_component/desktop/_button}}
+  .auth-component-tip {{> clearance/auth_component/desktop/_tip}}

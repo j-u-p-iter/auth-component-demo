@@ -1,0 +1,3 @@
+{{#if (renderField index)}}
+{{> (renderField index) }}
+{{/if}}

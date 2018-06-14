@@ -1,0 +1,5 @@
+{{#ifCond type '===' 'simple'}}
+{{> clearance/social_networks_auth_component/provider_item/_simple providerData}}
+{{else}}
+{{> clearance/social_networks_auth_component/provider_item/_extended providerData}}
+{{/ifCond}}

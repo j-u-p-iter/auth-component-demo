@@ -1,0 +1,5 @@
+%button.apress-button.ab-default.js-button-submit
+  {{#each content}}
+  %div{class: 'auth-component-button-content {{fromCamelToDash @key}}'}
+    {{this.buttonText}}
+  {{/each}}

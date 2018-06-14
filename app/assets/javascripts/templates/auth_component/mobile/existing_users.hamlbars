@@ -1,0 +1,23 @@
+.form-group.existing-users
+  %p= I18n.t('clearance.templates.auth_component.mobile.existing_users.user_already_exists')
+
+  %ul
+    {{#each users}}
+    %li
+      .radio
+        %input.js-user-exist-radio-auth{type: 'radio', name: 'users_exists', id: 'user-{{this.id}}',
+                                        data: {id: '{{this.id}}',
+                                               email: '{{this.email}}',
+                                               phone: '{{this.phone}}'}}
+        %label{for: 'user-{{this.id}}'}
+          {{#if this.email}}
+          {{this.email}}
+          {{else}}
+          {{this.phone}}
+          {{/if}}
+    {{/each}}
+
+  %button.apress-button.ab-default.js-button-yes-users-exists{type: 'button', disabled: true}
+    = I18n.t('clearance.templates.auth_component.mobile.existing_users.buttons.confirm')
+  %button.apress-button.ab-default.secondary.js-button-no-users-exists{type: 'button'}
+    = I18n.t('clearance.templates.auth_component.mobile.existing_users.buttons.deny')

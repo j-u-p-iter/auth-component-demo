@@ -1,0 +1,10 @@
+:ruby
+  providers = {vkontakte: {locales: {text: I18n.t('views.apress.clearance.oauth.vkontakte.text'),
+                                     title: I18n.t('views.apress.clearance.oauth.vkontakte.delete_item.title')}},
+               odnoklassniki: {locales: {text: I18n.t('views.apress.clearance.oauth.odnoklassniki.text'),
+                                         title: I18n.t('views.apress.clearance.oauth.odnoklassniki.delete_item.title')}},
+               facebook: {locales: {text: I18n.t('views.apress.clearance.oauth.facebook.text'),
+                                    title: I18n.t('views.apress.clearance.oauth.facebook.delete_item.title')}}}
+
+%div{class: 'social-networks-auth-component-container loading js-social-networks-auth-component-container',
+     data: {providers: providers.to_json}}

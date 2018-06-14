@@ -1,0 +1,12 @@
+.form-group.js-group-email-auth{data: {'required-data-message' => I18n.t('clearance.templates.auth_component.mobile.fields.email.message.required'),
+                                       'invalid-data-message' => I18n.t('clearance.templates.auth_component.mobile.fields.email.message.invalid'),
+                                       type: 'email'}}
+  .text-field-wrapper
+    {{> clearance/auth_component/mobile/_icons_holder}}
+    %input{class: 'text-field js-input-email-auth',
+           type: 'text',
+           name: 'email',
+           value: '{{fields.values.email}}',
+           placeholder: I18n.t('clearance.templates.auth_component.mobile.fields.email.placeholder'),
+           autocomplete: '{{fields.autocomplete}}'}
+  .error-block.js-error-message

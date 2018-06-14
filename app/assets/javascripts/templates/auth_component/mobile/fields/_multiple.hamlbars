@@ -1,0 +1,15 @@
+%div{class: 'form-group js-group-multiple-auth',
+     data: {'required-data-message': I18n.t('clearance.templates.auth_component.mobile.fields.multiple.message.required'),
+            'invalid-data-message': I18n.t('clearance.templates.auth_component.mobile.fields.multiple.message.invalid'),
+            type: 'multiple'}}
+
+  .text-field-wrapper
+    {{> clearance/auth_component/mobile/_icons_holder}}
+    %input{class: 'text-field js-input-multiple-auth',
+           type: 'text',
+           name: 'email_or_phone',
+           value: '{{fields.values.multiple}}',
+           placeholder: I18n.t('clearance.templates.auth_component.mobile.fields.multiple.placeholder'),
+           autocomplete: '{{fields.autocomplete}}'}
+  .error-block.js-error-message
+.js-existing-users-container

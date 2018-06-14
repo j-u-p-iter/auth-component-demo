@@ -1,0 +1,15 @@
+%input.js-input-user-auth{type: 'hidden'}
+
+{{> clearance/auth_component/desktop/_title}}
+
+{{#if withSocialRegistration}}
+%div{class: 'auth-component-section auth-component-section-social-networks-auth-component',
+     data: {'divider-content': I18n.t('clearance.templates.auth_component.desktop.common.divider_content')}}
+  {{> clearance/social_networks_auth_component/_container}}
+{{/if}}
+
+.auth-component-section.auth-component-section-flash-message
+  .apress-flash-message.with-icon.js-flash-message
+
+.auth-component-section.auth-component-section-body
+  {{> (renderComponent orientation)}}

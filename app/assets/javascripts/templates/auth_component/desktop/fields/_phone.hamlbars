@@ -1,0 +1,24 @@
+%div{class: 'form-group js-group-phone-auth {{#if fields.inline}}inline{{/if}}',
+     data: {'required-data-message' => I18n.t('clearance.templates.auth_component.desktop.fields.phone.message.required'),
+            'invalid-data-message' => I18n.t('clearance.templates.auth_component.desktop.fields.phone.message.invalid'),
+            'unique-data-message' => I18n.t('clearance.templates.auth_component.desktop.fields.phone.message.unique'),
+            type: 'phone'}}
+
+  {{#unless fields.withoutLabels}}
+  .label
+    %label{class: '{{#isRequired "phone"}}required{{/isRequired}}'}
+      = I18n.t('clearance.templates.auth_component.desktop.fields.phone.label')
+      {{#if fields.hints.phone}}
+      %span.hint.js-qtip-icon{data: {'qtip-options' => '{{toJSON fields.hints.phone}}'}}
+      {{/if}}
+  {{/unless}}
+
+  .text-field-wrapper
+    {{> clearance/auth_component/desktop/_icons_holder}}
+    %input{class: 'text-field js-input-phone-auth',
+           type: 'text',
+           name: 'phone',
+           value: '{{fields.values.phone}}',
+           autocomplete: '{{fields.autocomplete}}'}
+  .error-block.js-error-message
+.js-existing-users-container

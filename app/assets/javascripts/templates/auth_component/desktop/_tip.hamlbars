@@ -1,0 +1,4 @@
+{{#each content}}
+%div{class: 'auth-component-tip-content {{fromCamelToDash @key}}'}
+  {{{this.tip}}}
+{{/each}}

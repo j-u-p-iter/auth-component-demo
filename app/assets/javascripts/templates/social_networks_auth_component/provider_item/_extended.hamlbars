@@ -1,0 +1,12 @@
+.social-networks-auth-component-item.js-provider-item{class: '{{this.name}}', data: {'provider-name': '{{this.name}}'}}
+  {{#if this.currentUserSocialNetworkUID}}
+  %i.social-networks-auth-component-item-icon{class: '{{this.name}}'}
+  %span{class: 'social-networks-auth-component-item-user-info'}
+    {{this.currentUserSocialNetworkUID}}
+
+  %i{class: 'social-networks-auth-component-item-delete-item js-delete-provider-item', title: '{{this.locales.title}}'}
+  {{else}}
+  %a{class: 'social-networks-auth-component-item-link js-provider-item-link', href: '{{this.omniauthAuthorizeURL}}'}
+    %i.social-networks-auth-component-item-icon.disabled{class: '{{this.name}}'}
+    {{this.locales.text}}
+  {{/if}}

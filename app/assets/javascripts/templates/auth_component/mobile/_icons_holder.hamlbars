@@ -1,0 +1,5 @@
+.icons-holder
+  .icons-holder-cell
+    %i.icon.icon-toggle-password.js-icon-toggle-password
+  .icons-holder-cell
+    %i.icon.icon-clear.js-icon-clear-field

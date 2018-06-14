@@ -1,0 +1,15 @@
+%div{class: 'form-group js-group-name-auth {{#isHiddenByDefault "name"}}dn{{/isHiddenByDefault}}',
+     data: {'required-data-message' => I18n.t('clearance.templates.auth_component.mobile.fields.name.message.required'),
+            'invalid-data-message' => I18n.t('clearance.templates.auth_component.mobile.fields.name.message.invalid'),
+            type: 'name'}}
+
+  .text-field-wrapper
+    {{> clearance/auth_component/mobile/_icons_holder}}
+    %input{class: 'text-field js-input-name-auth',
+           type: 'text',
+           name: 'name',
+           placeholder: I18n.t('clearance.templates.auth_component.mobile.fields.name.placeholder'),
+           maxlength: '{{fields.maxlength.name}}',
+           value: '{{fields.values.profile_attributes.name}}',
+           autocomplete: '{{fields.autocomplete}}'}
+  .error-block.js-error-message

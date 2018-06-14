@@ -1,0 +1,4 @@
+.social-networks-auth-component.js-social-networks-auth-component{class: 'social-networks-auth-component-{{type}}'}
+  .social-networks-auth-component-flash-message
+    .apress-flash-message.with-icon.js-social-networks-auth-component-flash-message-body
+  {{> clearance/social_networks_auth_component/_provider_items}}
